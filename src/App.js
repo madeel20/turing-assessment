@@ -38,7 +38,7 @@ function App() {
 
         <section>
           <div className='d-flex justify-content-between align-items-center'>
-            <h1>Newest Job Offer</h1>
+            <h1>Newest Job Offers</h1>
             <a href="">
               View all job offers  <BsArrowRight />
             </a>
