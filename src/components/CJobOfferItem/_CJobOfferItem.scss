@@ -1,0 +1,72 @@
+.c-job-offer-card{
+    display: flex;
+    flex-direction: column;
+    padding:0 30px;
+    position: relative;
+    height: auto;
+    border-right: 2.5px solid rgba(0,0,0,0.1);
+    &:first-of-type{
+        padding:0 30px 0 0;
+    }
+
+    &:last-of-type{
+        padding-left:0 0 0 30px ;
+        border-right: none;
+    }
+
+
+    .head {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 15px;
+
+        .info-container {
+            display: flex;
+            flex-direction: column;
+
+            h5 {
+                font-size: 20px;
+                color: $primary;
+                font-weight: 700;
+                margin:0;
+            }
+            > div {
+                display: flex;
+                span{
+                    &:first-of-type{
+                        opacity: 1;
+                        font-weight: 600;
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
+
+        span {
+           font-size: 14px;
+            letter-spacing: 0px;
+            color: $black;
+            opacity: 0.6;
+            margin-top: 5px;
+        }
+        
+    }
+    p{
+        text-align: left;
+        letter-spacing: 0px;
+        color: $black;
+        opacity: 0.6;
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    button {
+        position: absolute;
+        bottom: -12px;
+        right: 30px;
+        padding: 8px;
+        display: flex;
+    }
+
+}

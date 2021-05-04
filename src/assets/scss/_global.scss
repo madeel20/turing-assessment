@@ -1,0 +1,82 @@
+
+body,html{
+    margin: 0;
+    padding: 0;
+}
+h1 {
+    font-size: 38px;
+}
+p{
+    font-size: 16px;
+    font-weight: 500;
+}
+span{
+}
+
+
+.banner {
+    color: white;
+    
+    width: 100%;
+
+    background-color: black;
+    background-image: url('../images/bannerimg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    > div {
+        min-height: 420px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        h1 {
+            margin-top: 50px;
+        }
+       
+        p{
+            text-align: left;
+            font: normal normal medium 20px/29px Gordita;
+            letter-spacing: 0px;
+            opacity: 0.8;
+            margin-bottom: 38px;
+        }
+        button {
+            font-size: 16px;
+        }
+    }
+
+   
+}
+
+.content {
+    padding: 70px 0px 70px 0px;
+    section{
+        margin-bottom: 70px;
+        h1 {
+            margin-bottom: 36px;
+        }
+        a{
+            font-weight: 700;
+            margin-bottom: 20px;
+            svg{
+                margin-left: 2px;
+            }
+        }
+
+        .companies-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+    
+
+    .jobs-container{
+        display: flex;
+        >div {
+            width: 100%;
+        }
+
+    }
+
+}
