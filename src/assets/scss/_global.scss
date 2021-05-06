@@ -4,18 +4,27 @@ body,html{
     padding: 0;
 }
 h1 {
-    font-size: 38px;
+    font-size: 48px;
 }
 p{
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 20px;
 }
 span{
+    font-size: 20px;
 }
 
+.container{
+    max-width: unset;
+    width: calc(100% - 280px);
+
+    @include Media($x-small-screen-width){
+        width: calc(100% - 30px);
+        padding: 0px 0px;
+    }
+}
 
 .banner {
-    color: white;
+    color: white; 
     
     width: 100%;
 
@@ -23,14 +32,21 @@ span{
     background-image: url('../images/bannerimg.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position-y: -60px;
+    font-family: 'Gordita Medium';
+    @include Media($x-small-screen-width){
+        background-position-y: unset;
+    }
     > div {
-        min-height: 420px;
+        min-height: 540px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         h1 {
             margin-top: 50px;
+            margin-bottom: 20px;
+            
         }
        
         p{
@@ -41,7 +57,8 @@ span{
             margin-bottom: 38px;
         }
         button {
-            font-size: 16px;
+            font-size: 20px;
+            padding: 12px 25px;
         }
     }
 
@@ -50,17 +67,27 @@ span{
 
 .content {
     padding: 70px 0px 70px 0px;
+    font-family: 'Manrope Medium';
     section{
-        margin-bottom: 70px;
+        margin-bottom: 75px;
+        .head{
+            @include Media($x-small-screen-width){
+                flex-wrap: wrap;
+                 margin-bottom: 40px;
+            }
+        }
         h1 {
             margin-bottom: 36px;
-            font-weight: 700;
+            font-family: 'Manrope Bold';
         }
         a{
             font-weight: 700;
-            margin-bottom: 20px;
+            margin: 0px 40px 20px 0px;
+            font-size: 18px;
+            font-family: 'Manrope Bold';
             svg{
                 margin-left: 2px;
+                font-size: 25px;
             }
         }
 
@@ -68,14 +95,40 @@ span{
             display: flex;
             align-items: center;
             justify-content: space-between;
+            padding-right: 40px;
+            @include Media($medium-screen-width){
+                flex-wrap: wrap;
+                gap: 40px 40px;
+                justify-content: flex-start;
+                
+            }
+            @include Media($x-small-screen-width){
+                gap: 40px 0px;
+                justify-content: space-between;
+                padding-right: 0;
+             }
         }
     }
     
 
     .jobs-container{
         display: flex;
+        @include Media($medium-screen-width){
+            flex-wrap: wrap;
+            gap: 40px 0px;
+        }
+        @include Media($small-screen-width){
+            flex-wrap: wrap;
+            gap: 50px 0px;
+        }
         >div {
             width: 100%;
+            @include Media($medium-screen-width){
+                    width: 50%;
+            }
+            @include Media($small-screen-width){
+                    width: 100%;
+            }
         }
 
     }

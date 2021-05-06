@@ -4,7 +4,7 @@ import {FaAngleRight} from 'react-icons/fa'
 
 function CJobOfferItem({ title, time, companyName, location, desc, salary='' }) {
     return (
-        <div className="c-job-offer-card">
+        <div className="c-job-offer-card ">
             <div className="head">
                 <div className="info-container">
                     <h5>{title}</h5>

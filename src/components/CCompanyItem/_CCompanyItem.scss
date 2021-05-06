@@ -2,10 +2,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 18px;
+    @include Media($x-small-screen-width){
+        width: 50%;
+     }
     > div {
-        width: 70px;
-        height: 70px;
+        width: 91px;
+        height: 91px;
         border-radius: 50%;
 
         display: flex;
@@ -14,13 +17,14 @@
         border: 1px solid $grey;
 
         img {
-            width: 22px;
+            width: 27px;
         }
 
        
     }
     h5{
-        font-size: 16px;
-        font-weight: 700;
+        font-size: 24px;
+        font-family: 'Manrope Bold';
+        font-weight: bold;
     }
 }

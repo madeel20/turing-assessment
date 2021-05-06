@@ -1,3 +1,13 @@
 $primary:#276FFB;
 $black:#141414;
 $grey:#B9B9B9;
+
+$medium-screen-width: 1650;
+$small-screen-width: 1100;
+$x-small-screen-width: 500;
+
+@mixin Media($var) {
+    @media only screen and (max-width: $var + px) {
+        @content;
+    }
+}

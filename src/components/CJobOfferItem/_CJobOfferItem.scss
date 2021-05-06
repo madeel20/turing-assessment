@@ -1,16 +1,28 @@
 .c-job-offer-card{
     display: flex;
     flex-direction: column;
-    padding:0 30px;
+    padding:0 40px;
     position: relative;
     height: auto;
     border-right: 2.5px solid rgba(0,0,0,0.1);
+    @include Media($medium-screen-width){
+        &:nth-child(2n){
+            border-right:unset;
+        }
+        &:nth-child(2n-1){
+            padding-left: 0px;
+        }
+    }
+    @include Media($small-screen-width){
+        padding: 0px !important;
+        border: unset;
+    }
     &:first-of-type{
-        padding:0 30px 0 0;
+        padding:0 40px 0 0;
     }
 
     &:last-of-type{
-        padding-left:0 0 0 30px ;
+        padding-left:0 0 0 40px ;
         border-right: none;
     }
 
@@ -19,17 +31,20 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        margin-bottom: 15px;
+        margin-bottom: 28px;
 
         .info-container {
             display: flex;
             flex-direction: column;
+            @include Media($x-small-screen-width){
+               width: 100%;
+            }
 
             h5 {
-                font-size: 20px;
+                font-size: 24px;
                 color: $primary;
-                font-weight: 700;
                 margin:0;
+                font-family: 'Manrope Bold';
             }
             > div {
                 display: flex;
@@ -37,14 +52,14 @@
                     &:first-of-type{
                         opacity: 1;
                         font-weight: 600;
-                        margin-right: 15px;
+                        margin-right: 21px;
                     }
                 }
             }
         }
 
         span {
-           font-size: 14px;
+           font-size: 18px;
             letter-spacing: 0px;
             color: $black;
             opacity: 0.6;
@@ -57,16 +72,21 @@
         letter-spacing: 0px;
         color: $black;
         opacity: 0.6;
-        font-size: 14px;
-        margin-bottom: 5px;
+        font-size: 20px;
+        margin:0px 40px 5px 0px;
+        
     }
 
     button {
         position: absolute;
-        bottom: -12px;
-        right: 30px;
-        padding: 8px;
+        bottom: -14px;
+        right: 40px;
+        padding: 9px;
         display: flex;
+        font-size: 25px;
+        @include Media($x-small-screen-width){
+            right: 10px;
+         }
     }
 
 }

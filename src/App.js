@@ -4,7 +4,7 @@ import { BsArrowRight } from 'react-icons/bs'
 import CJobOfferItem from './components/CJobOfferItem/CJobOfferItem';
 import CCompanyItem from './components/CCompanyItem/CCompanyItem';
 const jobs = [
-  { title: 'Junior Java Developer', time: '2 hours ago', companyName: 'PickSaaS', location: 'Lublin, Polska', desc: 'Join us in the Lublin office to build innovative long-term projects. Exciting international clients and partners and a work environment focused on learning and growth awaits you!', salary: '$ up to PLN 550 net / MD B2B' },
+  { title: 'Junior Java Developer', time: '2 hours ago', companyName: 'PickSaaS', location: 'Lublin, Polska', desc: 'I am currently looking for a Java Developer. Project for Public Sector Location: Wrocław (during the pandemic remote work)', salary: '$ up to PLN 550 net / MD B2B' },
   { title: 'Junior Project Manager', time: '3 hours ago', companyName: 'Frontkom', location: 'Lublin, Polska', desc: 'Join us in the Lublin office to build innovative long-term projects. Exciting international clients and partners and a work environment focused on learning and growth awaits you!' },
   { title: 'Junior Project Manager', time: '1 day ago', companyName: 'Frontkom', location: 'Lublin, Polska', desc: 'I am currently looking for a Java Developer. Project for Public Sector Location: Wrocław (during the pandemic remote work) ', salary: '$ up to PLN 550 net / MD B2B' },
 ]
@@ -37,13 +37,13 @@ function App() {
       <div className="container content">
 
         <section>
-          <div className='d-flex justify-content-between align-items-center'>
+          <div className='d-flex justify-content-between align-items-center head'>
             <h1>Newest Job Offers</h1>
             <a href="">
               View all job offers  <BsArrowRight />
             </a>
           </div>
-          <div className="jobs-container">
+          <div className="jobs-container ">
             {jobs.map(job => {
               return <CJobOfferItem {...job} />
             })}
